@@ -1,6 +1,0 @@
-C:\Users\HP\Downloads\far2.0\PT\week1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
-C:\Users\HP\Downloads\far2.0\PT\week1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
-C:\Users\HP\Downloads\far2.0\PT\week1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
-C:\Users\HP\Downloads\far2.0\PT\week1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
-C:\Users\HP\Downloads\far2.0\PT\week1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
-C:\Users\HP\Downloads\far2.0\PT\week1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
