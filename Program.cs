@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication3
 {
-    class Program
+    class Complex
     {
-        class Program 
+        class Complex
         static void Main(string[] args)
         {
             int[] a = new int[5];
