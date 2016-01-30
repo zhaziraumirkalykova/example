@@ -14,7 +14,7 @@ namespace ConsoleApplication1
             this.a = a;
             this.b = b; // обрашение параметров фунций
         }
-        public static Complex operator +(Complex n1, Complex n2) // создание операта плюс для того чтобы суммировать комплексные числа
+        public static Complex operator +(Complex c1, Complex c2) // создание операта плюс для того чтобы суммировать комплексные числа
         {
             Complex sum = new Complex(c1.a + c2.a, c1.b + c2.b); // суммирование числа а аи б 
             return sum; // возвращяем значение 
