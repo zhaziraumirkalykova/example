@@ -6,36 +6,19 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Complex
+    // fucfion for checking the prime numbers
+    static bool Prime_number(string s)
     {
-        public int a, b; // создание комплексного числа
-        public Complex (int a, int b) // создание конструктора
+        int x = int.Parse(s); // change from string to integer
+        int cnt = 0;
+        for (int i = 2; i <= Math.Sqrt(x); ++i) //подсчет количество делителей отличных от 1 и самого числа
         {
-            this.a = a;
-            this.b = b; // обрашение параметров фунций
+            if (x % i == 0) // если число делится на какоеөлибо число кроме 1 и самого числа
+            {
+                cnt++; // прибовляет +1
+            }
         }
-        public static Complex operator +(Complex c1, Complex c2) // создание операта плюс для того чтобы суммировать комплексные числа
-        {
-            Complex sum = new Complex(c1.a + c2.a, c1.b + c2.b); // суммирование числа а аи б 
-            return sum; // возвращяем значение 
-        }
-        public override string ToSting() // to chance the integer into string
-        {
-            a + "/" + b;
-        }
-    }
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int x, y, z, w; //задаю переменные
-            x = int.Parse(Console.ReadLine());
-            y = int.Parse(Console.ReadLine());
-            z = int.Parse(Console.ReadLine());
-            w = int.Parse(Console.ReadLine());
-            Complex first_complex = new Complex(x, y);
-            Complex second_complex = new Complex(x, y);
-            Complex sum = first_complex + second_complex;
-        }
+
+        return cnt == 0 && x != 1; //
     }
 }
