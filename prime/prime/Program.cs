@@ -4,27 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication2
+namespace prime
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string[] token = Console.ReadLine().Split(); // 
-            for (int i= 0; i<token.Length; i++)
+            string[] Token = Console.ReadLine().Split();
+            for(int i=0; i<=Token.Length; i++)
             {
                 int cnt = 0;
-                int s = int.Parse(token[i]);
-                for (int j=2; j<= s; j++)
+                int s;
+                s=int.Parse(Token[i]);
+                for (int j = 2; j<=s; j++)
                 {
-                    if(s % j == 0)
+                    if (s % j == 0)
                     {
                         cnt++;
                     }
                 }
-                return cnt == 0 && x != 1;
+                if ( cnt == 1)
+                {
+                    Console.WriteLine(s);
+                } 
             }
             Console.ReadKey();
+            
+                     
         }
     }
 }
