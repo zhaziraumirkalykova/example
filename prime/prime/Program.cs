@@ -10,7 +10,7 @@ namespace prime
     {
         static void Main(string[] args)
         {
-            string[] Token = Console.ReadLine().Split();
+            string[] Token = Console.ReadLine().Split('*');
             for(int i=0; i<=Token.Length; i++)
             {
                 int cnt = 0;

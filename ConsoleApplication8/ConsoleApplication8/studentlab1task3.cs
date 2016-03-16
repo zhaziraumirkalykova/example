@@ -19,7 +19,16 @@ namespace ConsoleApplication8
             this.gpa = _gpa; // обращение к параметрам        
 
         }
-        public override string ToString() // change integer to string
+        public Student()
+        {
+
+        }
+        public Student(string name, string _surname)
+        {
+            this.name = name;
+            this.surname = _surname;
+        }
+        public override string ToString() 
         {
             return name + " " + surname + " " + gpa; // возвращение name surname and gpa
         }
@@ -28,12 +37,10 @@ namespace ConsoleApplication8
         {
             static void Main(string[] args)
             {
-                string name = Console.ReadLine(); // считывает имю и фамилию
-                string surname = Console.ReadLine();
-                double gpa = Convert.ToDouble(Console.ReadLine()); //change the string to double in order to understand the gpa as it is the real number
-                Student information = new Student(name, surname, gpa); // create he information about the student
-                Console.WriteLine(information); // задаем информацию именно имя, фамилия, гпа
-           
+            Student s = new Student("Zhazira", "Umirkalykova", 2.67);
+            Student a = new Student("name", "Surname");
+            Console.WriteLine(s);
+            Console.WriteLine(a);
             Console.ReadKey();
         }
     }

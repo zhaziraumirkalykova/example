@@ -11,45 +11,31 @@ namespace lab2_min_prime_number
     {
         static void Main(string[] args)
         {
-            FileStream fs = new FileStream(@"C: \Users\HP\Downloads\far2.0\PT\lab2_min_prime_number\lab2_min_prime_number\lb2.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            FileStream ffs = new FileStream(@"C: \Users\HP\Downloads\far2.0\PT\lab2_min_prime_number\lab2_min_prime_number\lab2.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            FileStream fs = new FileStream(@"C:\Users\HP\Downloads\far2.0\PT\lab2_min_prime_number\lab2_min_prime_number\lb2.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            FileStream ffs = new FileStream(@"C:\Users\HP\Downloads\far2.0\PT\lab2_min_prime_number\lab2_min_prime_number\lab2.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             StreamReader a = new StreamReader(fs);
-            StreamReader b = new StreamReader(ffs);
-            int cnt = 0;
-            int min = 0;
-            bool flag = false;
-            string[] s = Console.ReadLine().Split();
+            StreamWriter b = new StreamWriter(ffs);
+            
+            string[] token = a.ReadLine().Split();
 
-            foreach (string h in s)
+            int min= int.Parse(token[0]);
+            foreach (string w in token)
             {
-                int number = int.Parse(h);
-                cnt = 0;
-                for (int i = 2; i <= number; i++)
+                
+                int x = int.Parse(w);
+                bool p = false;
+                for (int i = 2; i * i <= x; i++)
                 {
-
-
-                    if (number % i == 0)
-                    {
-                        cnt++;
-                    }
-                    if (cnt >= 2)
-                    {
-                        break;
-
-                    }
+                    if (x % i == 0)
+                        p = true;
                 }
-                if (cnt == 1)
+                if (p == false && x != 1)
                 {
-                    if (!flag)
-                    {
-                        min = number;
-                    }
-                    if (min > number)
-
-                        min = number;
+                    if (x <= min)
+                        min = x;
                 }
             }
-            Console.WriteLine(min);
+            b.WriteLine(min);
             a.Close();
             b.Close();
             fs.Close();
